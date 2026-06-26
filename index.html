@@ -17,6 +17,11 @@
   cssFile.href = "style.css?v=" + Date.now();
   document.head.appendChild(cssFile);
 </script>
+
+  <script
+    type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+  ></script>
 </head>
 
 <body>
@@ -29,6 +34,7 @@
 
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#about">About</a>
+        <a href="#models">3D Models</a>
         <a href="#services">Services</a>
         <a href="#process">How it works</a>
         <a href="#scope">Scope</a>
@@ -256,6 +262,255 @@
             <p>
               Customer reviews will be added only with permission after completed work.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section models-section" id="models">
+      <div class="site-width">
+        <div class="models-header">
+          <div>
+            <p class="eyebrow">Interactive 3D models</p>
+            <h2>Inspect prototype work like a CAD viewer.</h2>
+          </div>
+
+          <p>
+            Rotate, pan, and zoom each model directly in the browser. Use the view buttons
+            for ISO, top, bottom, front, back, left, and right views, or open the larger preview.
+          </p>
+        </div>
+
+        <div class="model-showcase" aria-label="Interactive 3D model gallery">
+          <button class="model-arrow model-arrow-left" type="button" data-model-prev aria-label="Previous 3D model">
+            ‹
+          </button>
+
+          <div class="model-stage">
+            <article class="model-slide is-active" data-model-slide data-model-title="PCB model">
+              <div class="model-viewer-shell">
+                <div class="model-view-toolbar" aria-label="PCB model view controls">
+                  <button type="button" class="model-view-button is-active" data-view="iso">ISO</button>
+                  <button type="button" class="model-view-button" data-view="top">Top</button>
+                  <button type="button" class="model-view-button" data-view="bottom">Bot</button>
+                  <button type="button" class="model-view-button" data-view="front">Front</button>
+                  <button type="button" class="model-view-button" data-view="back">Back</button>
+                  <button type="button" class="model-view-button" data-view="left">Left</button>
+                  <button type="button" class="model-view-button" data-view="right">Right</button>
+                  <button
+                    type="button"
+                    class="model-view-button model-full-button"
+                    data-model-open
+                    data-model-src="assets/models/pcb-board.glb?v=4"
+                    data-model-poster="assets/pcb-render.png"
+                    data-model-title="Bluetooth preamp / low-voltage PCB development"
+                    data-model-type="PCB model"
+                    data-model-alt="Expanded 3D model of a low-voltage Bluetooth preamp PCB prototype"
+                    aria-label="Open PCB model larger"
+                  >
+                    ⛶
+                  </button>
+                </div>
+
+                <model-viewer
+                  class="standard-model-viewer"
+                  src="assets/models/pcb-board.glb?v=4"
+                  poster="assets/pcb-render.png"
+                  alt="Interactive 3D model of a low-voltage Bluetooth preamp PCB prototype"
+                  camera-controls
+                  touch-action="pan-y"
+                  interaction-prompt="none"
+                  camera-orbit="45deg 60deg 135%"
+                  camera-target="auto auto auto"
+                  field-of-view="28deg"
+                  min-field-of-view="10deg"
+                  max-field-of-view="60deg"
+                  shadow-intensity="0.55"
+                  shadow-softness="0.85"
+                  exposure="0.7"
+                  tone-mapping="neutral"
+                  environment-image="neutral"
+                ></model-viewer>
+              </div>
+
+              <div class="model-copy">
+                <span class="model-type-pill">PCB model</span>
+                <h3>Bluetooth preamp / low-voltage PCB development</h3>
+                <p>
+                  Example board model for showing practical PCB layout, component placement,
+                  low-voltage power/audio work, and prototype design direction.
+                </p>
+                <p class="model-controls-help">
+                  Left-drag to rotate. Scroll to zoom. Right-click drag, Shift-drag, or two-finger drag to pan.
+                  Use the view buttons for quick CAD-style angles.
+                </p>
+              </div>
+            </article>
+
+            <article class="model-slide" data-model-slide data-model-title="Autodesk fixture">
+              <div class="model-viewer-shell">
+                <div class="model-view-toolbar" aria-label="Autodesk fixture view controls">
+                  <button type="button" class="model-view-button is-active" data-view="iso">ISO</button>
+                  <button type="button" class="model-view-button" data-view="top">Top</button>
+                  <button type="button" class="model-view-button" data-view="bottom">Bot</button>
+                  <button type="button" class="model-view-button" data-view="front">Front</button>
+                  <button type="button" class="model-view-button" data-view="back">Back</button>
+                  <button type="button" class="model-view-button" data-view="left">Left</button>
+                  <button type="button" class="model-view-button" data-view="right">Right</button>
+                  <button
+                    type="button"
+                    class="model-view-button model-full-button"
+                    data-model-open
+                    data-model-src="assets/models/autodesk-fixture.glb?v=4"
+                    data-model-title="Autodesk CAD fixture / jig example"
+                    data-model-type="CAD fixture"
+                    data-model-alt="Expanded 3D model of an Autodesk CAD fixture or jig"
+                    aria-label="Open Autodesk fixture model larger"
+                  >
+                    ⛶
+                  </button>
+                </div>
+
+                <model-viewer
+                  class="standard-model-viewer"
+                  src="assets/models/autodesk-fixture.glb?v=4"
+                  alt="Interactive 3D model of an Autodesk CAD fixture or jig"
+                  camera-controls
+                  touch-action="pan-y"
+                  interaction-prompt="none"
+                  camera-orbit="45deg 60deg 135%"
+                  camera-target="auto auto auto"
+                  field-of-view="28deg"
+                  min-field-of-view="10deg"
+                  max-field-of-view="60deg"
+                  shadow-intensity="0.55"
+                  shadow-softness="0.85"
+                  exposure="0.7"
+                  tone-mapping="neutral"
+                  environment-image="neutral"
+                ></model-viewer>
+              </div>
+
+              <div class="model-copy">
+                <span class="model-type-pill">CAD fixture</span>
+                <h3>Autodesk CAD fixture / jig example</h3>
+                <p>
+                  Example CAD work for PCB holders, test fixtures, brackets, assembly aids,
+                  and 3D-printable support parts.
+                </p>
+                <p class="model-controls-help">
+                  Same controls and view buttons as the PCB model. If Autodesk front is the usable top,
+                  use the Front button or reset that model orientation before export.
+                </p>
+              </div>
+            </article>
+
+            <article class="model-slide" data-model-slide data-model-title="Enclosure concept">
+              <div class="model-viewer-shell">
+                <div class="model-view-toolbar" aria-label="Enclosure concept view controls">
+                  <button type="button" class="model-view-button is-active" data-view="iso">ISO</button>
+                  <button type="button" class="model-view-button" data-view="top">Top</button>
+                  <button type="button" class="model-view-button" data-view="bottom">Bot</button>
+                  <button type="button" class="model-view-button" data-view="front">Front</button>
+                  <button type="button" class="model-view-button" data-view="back">Back</button>
+                  <button type="button" class="model-view-button" data-view="left">Left</button>
+                  <button type="button" class="model-view-button" data-view="right">Right</button>
+                  <button
+                    type="button"
+                    class="model-view-button model-full-button"
+                    data-model-open
+                    data-model-src="assets/models/enclosure-concept.glb?v=4"
+                    data-model-title="Enclosure / bracket concept"
+                    data-model-type="CAD concept"
+                    data-model-alt="Expanded 3D model of an enclosure or bracket concept"
+                    aria-label="Open enclosure model larger"
+                  >
+                    ⛶
+                  </button>
+                </div>
+
+                <model-viewer
+                  class="standard-model-viewer"
+                  src="assets/models/enclosure-concept.glb?v=4"
+                  alt="Interactive 3D model of an enclosure or bracket concept"
+                  camera-controls
+                  touch-action="pan-y"
+                  interaction-prompt="none"
+                  camera-orbit="45deg 60deg 135%"
+                  camera-target="auto auto auto"
+                  field-of-view="28deg"
+                  min-field-of-view="10deg"
+                  max-field-of-view="60deg"
+                  shadow-intensity="0.55"
+                  shadow-softness="0.85"
+                  exposure="0.7"
+                  tone-mapping="neutral"
+                  environment-image="neutral"
+                ></model-viewer>
+              </div>
+
+              <div class="model-copy">
+                <span class="model-type-pill">CAD concept</span>
+                <h3>Enclosure / bracket concept</h3>
+                <p>
+                  Example mechanical support work for low-voltage prototypes, enclosures,
+                  mounting parts, brackets, and small hardware pieces.
+                </p>
+                <p class="model-controls-help">
+                  Same CAD-style controls. Use ISO for the home view, or jump to top, bottom,
+                  front, back, left, and right.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <button class="model-arrow model-arrow-right" type="button" data-model-next aria-label="Next 3D model">
+            ›
+          </button>
+        </div>
+
+        <div class="model-dots" data-model-dots aria-label="3D model slide controls"></div>
+      </div>
+
+      <div class="model-lightbox" data-model-lightbox aria-hidden="true">
+        <button class="model-lightbox-backdrop" type="button" data-close-model aria-label="Close 3D preview"></button>
+
+        <div class="model-lightbox-content">
+          <button class="model-lightbox-close" type="button" data-close-model aria-label="Close 3D preview">
+            ×
+          </button>
+
+          <div class="model-view-toolbar model-lightbox-toolbar" aria-label="Expanded model view controls">
+            <button type="button" class="model-view-button is-active" data-expanded-view="iso">ISO</button>
+            <button type="button" class="model-view-button" data-expanded-view="top">Top</button>
+            <button type="button" class="model-view-button" data-expanded-view="bottom">Bot</button>
+            <button type="button" class="model-view-button" data-expanded-view="front">Front</button>
+            <button type="button" class="model-view-button" data-expanded-view="back">Back</button>
+            <button type="button" class="model-view-button" data-expanded-view="left">Left</button>
+            <button type="button" class="model-view-button" data-expanded-view="right">Right</button>
+          </div>
+
+          <model-viewer
+            id="expanded-model-viewer"
+            class="expanded-model-viewer standard-model-viewer"
+            camera-controls
+            touch-action="pan-y"
+            interaction-prompt="none"
+            camera-orbit="45deg 60deg 135%"
+            camera-target="auto auto auto"
+            field-of-view="28deg"
+            min-field-of-view="8deg"
+            max-field-of-view="70deg"
+            shadow-intensity="0.55"
+            shadow-softness="0.85"
+            exposure="0.7"
+            tone-mapping="neutral"
+            environment-image="neutral"
+          ></model-viewer>
+
+          <div class="expanded-model-info">
+            <span id="expanded-model-type">Interactive model</span>
+            <strong id="expanded-model-title">3D model preview</strong>
           </div>
         </div>
       </div>
@@ -695,5 +950,223 @@
       <p>Low-voltage electronics design and prototyping support.</p>
     </div>
   </footer>
+  <script>
+    const VIEW_PRESETS = {
+      iso: {
+        label: "ISO",
+        orbit: "45deg 60deg 135%",
+        fieldOfView: "28deg"
+      },
+      top: {
+        label: "Top",
+        orbit: "0deg 0deg 135%",
+        fieldOfView: "28deg"
+      },
+      bottom: {
+        label: "Bottom",
+        orbit: "0deg 180deg 135%",
+        fieldOfView: "28deg"
+      },
+      front: {
+        label: "Front",
+        orbit: "0deg 90deg 135%",
+        fieldOfView: "28deg"
+      },
+      back: {
+        label: "Back",
+        orbit: "180deg 90deg 135%",
+        fieldOfView: "28deg"
+      },
+      left: {
+        label: "Left",
+        orbit: "-90deg 90deg 135%",
+        fieldOfView: "28deg"
+      },
+      right: {
+        label: "Right",
+        orbit: "90deg 90deg 135%",
+        fieldOfView: "28deg"
+      }
+    };
+
+    const modelSlides = Array.from(document.querySelectorAll("[data-model-slide]"));
+    const modelDotsContainer = document.querySelector("[data-model-dots]");
+    const modelPrevButton = document.querySelector("[data-model-prev]");
+    const modelNextButton = document.querySelector("[data-model-next]");
+
+    let activeModelIndex = 0;
+    let expandedActiveView = "iso";
+
+    function applyViewerPreset(viewer, presetName) {
+      if (!viewer || !VIEW_PRESETS[presetName]) return;
+
+      const preset = VIEW_PRESETS[presetName];
+      viewer.setAttribute("camera-orbit", preset.orbit);
+      viewer.setAttribute("field-of-view", preset.fieldOfView);
+      viewer.setAttribute("camera-target", "auto auto auto");
+
+      if (typeof viewer.jumpCameraToGoal === "function") {
+        viewer.jumpCameraToGoal();
+      }
+    }
+
+    function setActiveViewButton(buttons, activeView) {
+      buttons.forEach((button) => {
+        const buttonView = button.dataset.view || button.dataset.expandedView;
+        button.classList.toggle("is-active", buttonView === activeView);
+        button.setAttribute("aria-pressed", buttonView === activeView ? "true" : "false");
+      });
+    }
+
+    function showModelSlide(index) {
+      if (!modelSlides.length) return;
+
+      activeModelIndex = (index + modelSlides.length) % modelSlides.length;
+
+      modelSlides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === activeModelIndex;
+        slide.classList.toggle("is-active", isActive);
+        slide.setAttribute("aria-hidden", isActive ? "false" : "true");
+
+        if (isActive) {
+          const viewer = slide.querySelector("model-viewer");
+          applyViewerPreset(viewer, "iso");
+          setActiveViewButton(Array.from(slide.querySelectorAll("[data-view]")), "iso");
+        }
+      });
+
+      document.querySelectorAll("[data-model-dot]").forEach((dot, dotIndex) => {
+        const isActive = dotIndex === activeModelIndex;
+        dot.classList.toggle("is-active", isActive);
+        dot.setAttribute("aria-current", isActive ? "true" : "false");
+      });
+    }
+
+    if (modelDotsContainer) {
+      modelSlides.forEach((slide, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "model-dot";
+        dot.setAttribute("data-model-dot", "");
+        dot.setAttribute("aria-label", "Show " + (slide.dataset.modelTitle || "model " + (index + 1)));
+
+        dot.addEventListener("click", () => {
+          showModelSlide(index);
+        });
+
+        modelDotsContainer.appendChild(dot);
+      });
+    }
+
+    if (modelPrevButton) {
+      modelPrevButton.addEventListener("click", () => {
+        showModelSlide(activeModelIndex - 1);
+      });
+    }
+
+    if (modelNextButton) {
+      modelNextButton.addEventListener("click", () => {
+        showModelSlide(activeModelIndex + 1);
+      });
+    }
+
+    document.querySelectorAll(".model-viewer-shell").forEach((shell) => {
+      const viewer = shell.querySelector("model-viewer");
+      const viewButtons = Array.from(shell.querySelectorAll("[data-view]"));
+
+      viewButtons.forEach((button) => {
+        button.setAttribute("aria-pressed", button.classList.contains("is-active") ? "true" : "false");
+
+        button.addEventListener("click", () => {
+          const view = button.dataset.view;
+          applyViewerPreset(viewer, view);
+          setActiveViewButton(viewButtons, view);
+        });
+      });
+    });
+
+    showModelSlide(0);
+
+    const modelLightbox = document.querySelector("[data-model-lightbox]");
+    const expandedModelViewer = document.getElementById("expanded-model-viewer");
+    const expandedModelTitle = document.getElementById("expanded-model-title");
+    const expandedModelType = document.getElementById("expanded-model-type");
+    const expandedViewButtons = Array.from(document.querySelectorAll("[data-expanded-view]"));
+
+    function openModelLightbox(button) {
+      if (!modelLightbox || !expandedModelViewer) return;
+
+      const modelSrc = button.dataset.modelSrc;
+      const modelPoster = button.dataset.modelPoster;
+      const modelTitle = button.dataset.modelTitle || "3D model preview";
+      const modelType = button.dataset.modelType || "Interactive model";
+      const modelAlt = button.dataset.modelAlt || modelTitle;
+
+      expandedModelViewer.setAttribute("src", modelSrc);
+      expandedModelViewer.setAttribute("alt", modelAlt);
+      expandedModelViewer.setAttribute("camera-target", "auto auto auto");
+      expandedModelViewer.setAttribute("field-of-view", "28deg");
+      expandedModelViewer.setAttribute("shadow-intensity", "0.55");
+      expandedModelViewer.setAttribute("shadow-softness", "0.85");
+      expandedModelViewer.setAttribute("exposure", "0.7");
+      expandedModelViewer.setAttribute("tone-mapping", "neutral");
+      expandedModelViewer.setAttribute("environment-image", "neutral");
+
+      if (modelPoster) {
+        expandedModelViewer.setAttribute("poster", modelPoster);
+      } else {
+        expandedModelViewer.removeAttribute("poster");
+      }
+
+      expandedModelTitle.textContent = modelTitle;
+      expandedModelType.textContent = modelType;
+
+      expandedActiveView = "iso";
+      applyViewerPreset(expandedModelViewer, expandedActiveView);
+      setActiveViewButton(expandedViewButtons, expandedActiveView);
+
+      modelLightbox.classList.add("is-open");
+      modelLightbox.setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
+    }
+
+    function closeModelLightbox() {
+      if (!modelLightbox) return;
+
+      modelLightbox.classList.remove("is-open");
+      modelLightbox.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("no-scroll");
+
+      if (expandedModelViewer) {
+        expandedModelViewer.removeAttribute("src");
+      }
+    }
+
+    document.querySelectorAll("[data-model-open]").forEach((button) => {
+      button.addEventListener("click", () => {
+        openModelLightbox(button);
+      });
+    });
+
+    expandedViewButtons.forEach((button) => {
+      button.setAttribute("aria-pressed", button.classList.contains("is-active") ? "true" : "false");
+
+      button.addEventListener("click", () => {
+        expandedActiveView = button.dataset.expandedView;
+        applyViewerPreset(expandedModelViewer, expandedActiveView);
+        setActiveViewButton(expandedViewButtons, expandedActiveView);
+      });
+    });
+
+    document.querySelectorAll("[data-close-model]").forEach((button) => {
+      button.addEventListener("click", closeModelLightbox);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeModelLightbox();
+      }
+    });
+  </script>
 </body>
 </html>
