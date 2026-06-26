@@ -11,7 +11,12 @@
     content="Bradshaw Hardware Labs provides affordable low-voltage electronics design and prototyping support, including schematic design, PCB layout, testing, debugging, CAD fixtures, and prototype planning."
   />
 
-  <link rel="stylesheet" href="style.css" />
+  <script>
+  const cssFile = document.createElement("link");
+  cssFile.rel = "stylesheet";
+  cssFile.href = "style.css?v=" + Date.now();
+  document.head.appendChild(cssFile);
+</script>
 </head>
 
 <body>
