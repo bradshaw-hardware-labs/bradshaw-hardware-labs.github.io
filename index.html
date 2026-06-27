@@ -14,16 +14,18 @@
   <link rel="canonical" href="https://mbdesignswork.com/" />
 
   <!-- Favicon / browser tab icon -->
-  <link rel="icon" type="image/png" href="assets/logo.png?v=3" />
-  <link rel="shortcut icon" href="assets/logo.png?v=3" />
-  <link rel="apple-touch-icon" href="assets/logo.png?v=3" />
+  <link rel="icon" type="image/png" href="assets/logo.png?v=4" />
+  <link rel="shortcut icon" href="assets/logo.png?v=4" />
+  <link rel="apple-touch-icon" href="assets/logo.png?v=4" />
 
   <script>
-    const cssFile = document.createElement("link");
-    cssFile.rel = "stylesheet";
-    cssFile.href = "style.css?v=" + Date.now();
-    document.head.appendChild(cssFile);
-  </script>
+  const cssFile = document.createElement("link");
+  cssFile.rel = "stylesheet";
+  cssFile.href = "style.css?v=" + Date.now();
+  document.head.appendChild(cssFile);
+</script>
+
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
   <script
     type="module"
@@ -42,10 +44,9 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#catalog">Catalog</a>
         <a href="#models">Models</a>
-        <a href="#services">Services</a>
+        <a href="#services">Services &amp; payments</a>
         <a href="#process">Process</a>
         <a href="#scope">Scope</a>
-        <a href="#pricing">Pricing</a>
         <a href="#about">About</a>
       </nav>
 
@@ -455,8 +456,8 @@
           <p class="eyebrow">Services</p>
           <h2>Hourly electronics support with clear starting points.</h2>
           <p>
-            Most custom work is billed hourly so the scope can stay flexible without forcing the wrong package.
-            A 2-hour minimum applies to hourly project work, and fixed consultation/review options are available when you need a clear first step.
+            Most custom work starts with either a fixed consultation/review or a 2-hour minimum starter payment.
+            The payment button on each service card is the starting payment, not a full-project cap. Extra time is invoiced separately based on the actual hours worked.
           </p>
         </div>
 
@@ -464,17 +465,16 @@
           <article class="service-card featured">
             <div class="service-content">
               <div class="service-top">
-                <div>
+                <div class="service-meta">
                   <p class="service-tag">Main service</p>
-                  <h3>Electronics Prototype Support</h3>
+                  <p class="service-start">2-hour minimum</p>
                 </div>
-                <p class="price">CA$65/hr</p>
+                <h3>Electronics Prototype Support</h3>
               </div>
 
               <p class="service-summary">
                 Hourly support for low-voltage electronics prototypes, PCB work, firmware bring-up,
                 breadboarding, debugging, reverse engineering, and product-control circuit development.
-                New hourly projects have a 2-hour minimum.
               </p>
 
               <h4>Good for</h4>
@@ -487,20 +487,26 @@
             </div>
 
             <div class="service-action">
-              <a href="#contact" class="btn btn-primary full-width">
-                Request hourly project support
-              </a>
+              <div class="stripe-button-wrap">
+                <stripe-buy-button
+                  buy-button-id="buy_btn_1TmpeHBxiH9fLnpz1LNXh1FN"
+                  publishable-key="pk_live_51Tmk7eBxiH9fLnpzQ6DKMkk8iXmvvJmkZzdnr97Z20H3ZwwmimouBnGvzfBrnCrsH4f2VzI4Go5ejm15qMUc9cob00ikpPREut"
+                >
+                </stripe-buy-button>
+              </div>
+              <p class="payment-note">Covers the 2-hour minimum starter payment. Extra hours are invoiced later.</p>
+              <a href="#contact" class="service-secondary-link">Ask questions before paying</a>
             </div>
           </article>
 
           <article class="service-card">
             <div class="service-content">
               <div class="service-top">
-                <div>
+                <div class="service-meta">
                   <p class="service-tag">Best first step</p>
-                  <h3>Project Consultation</h3>
+                  <p class="service-start">Fixed first step</p>
                 </div>
-                <p class="price">CA$150</p>
+                <h3>Project Consultation</h3>
               </div>
 
               <p class="service-summary">
@@ -518,20 +524,26 @@
             </div>
 
             <div class="service-action">
-              <a href="#contact" class="btn btn-secondary full-width">
-                Book consultation
-              </a>
+              <div class="stripe-button-wrap">
+                <stripe-buy-button
+                  buy-button-id="buy_btn_1TmoywBxiH9fLnpzPQLLUcHT"
+                  publishable-key="pk_live_51Tmk7eBxiH9fLnpzQ6DKMkk8iXmvvJmkZzdnr97Z20H3ZwwmimouBnGvzfBrnCrsH4f2VzI4Go5ejm15qMUc9cob00ikpPREut"
+                >
+                </stripe-buy-button>
+              </div>
+              <p class="payment-note">Fixed consultation for review, direction, and next steps before build work.</p>
+              <a href="#contact" class="service-secondary-link">Ask questions before booking</a>
             </div>
           </article>
 
           <article class="service-card">
             <div class="service-content">
               <div class="service-top">
-                <div>
+                <div class="service-meta">
                   <p class="service-tag">Design check</p>
-                  <h3>Schematic / PCB Review</h3>
+                  <p class="service-start">Starting review</p>
                 </div>
-                <p class="price">From CA$150</p>
+                <h3>Schematic / PCB Review</h3>
               </div>
 
               <p class="service-summary">
@@ -549,20 +561,26 @@
             </div>
 
             <div class="service-action">
-              <a href="#contact" class="btn btn-secondary full-width">
-                Request PCB review
-              </a>
+              <div class="stripe-button-wrap">
+                <stripe-buy-button
+                  buy-button-id="buy_btn_1TmpF5BxiH9fLnpzeRwCZziD"
+                  publishable-key="pk_live_51Tmk7eBxiH9fLnpzQ6DKMkk8iXmvvJmkZzdnr97Z20H3ZwwmimouBnGvzfBrnCrsH4f2VzI4Go5ejm15qMUc9cob00ikpPREut"
+                >
+                </stripe-buy-button>
+              </div>
+              <p class="payment-note">Starts with a fixed review. Larger reviews only continue with your approval.</p>
+              <a href="#contact" class="service-secondary-link">Ask questions before paying</a>
             </div>
           </article>
 
           <article class="service-card compact-card">
             <div class="service-content">
               <div class="service-top">
-                <div>
+                <div class="service-meta">
                   <p class="service-tag">CAD / 3D print</p>
-                  <h3>CAD, Fixtures &amp; 3D Prints</h3>
+                  <p class="service-start">2-hour minimum</p>
                 </div>
-                <p class="price">CA$65/hr</p>
+                <h3>CAD, Fixtures &amp; 3D Prints</h3>
               </div>
 
               <p class="service-summary">
@@ -572,18 +590,26 @@
             </div>
 
             <div class="service-action">
-              <a href="#contact" class="btn btn-secondary full-width">Request CAD / 3D print work</a>
+              <div class="stripe-button-wrap">
+                <stripe-buy-button
+                  buy-button-id="buy_btn_1TmpdhBxiH9fLnpzERbLz7rV"
+                  publishable-key="pk_live_51Tmk7eBxiH9fLnpzQ6DKMkk8iXmvvJmkZzdnr97Z20H3ZwwmimouBnGvzfBrnCrsH4f2VzI4Go5ejm15qMUc9cob00ikpPREut"
+                >
+                </stripe-buy-button>
+              </div>
+              <p class="payment-note">Covers the 2-hour minimum starter payment. Materials, print time, and outside costs are separate.</p>
+              <a href="#contact" class="service-secondary-link">Ask questions before paying</a>
             </div>
           </article>
 
           <article class="service-card compact-card">
             <div class="service-content">
               <div class="service-top">
-                <div>
+                <div class="service-meta">
                   <p class="service-tag">Embedded</p>
-                  <h3>Firmware / Bluetooth Bring-Up</h3>
+                  <p class="service-start">2-hour minimum</p>
                 </div>
-                <p class="price">CA$65/hr</p>
+                <h3>Firmware / Bluetooth Bring-Up</h3>
               </div>
 
               <p class="service-summary">
@@ -593,18 +619,26 @@
             </div>
 
             <div class="service-action">
-              <a href="#contact" class="btn btn-secondary full-width">Request firmware support</a>
+              <div class="stripe-button-wrap">
+                <stripe-buy-button
+                  buy-button-id="buy_btn_1TmpdNBxiH9fLnpz4Q43QKD2"
+                  publishable-key="pk_live_51Tmk7eBxiH9fLnpzQ6DKMkk8iXmvvJmkZzdnr97Z20H3ZwwmimouBnGvzfBrnCrsH4f2VzI4Go5ejm15qMUc9cob00ikpPREut"
+                >
+                </stripe-buy-button>
+              </div>
+              <p class="payment-note">Covers the 2-hour minimum starter payment. Extra hours, modules, and outside costs are separate.</p>
+              <a href="#contact" class="service-secondary-link">Ask questions before paying</a>
             </div>
           </article>
 
           <article class="service-card compact-card">
             <div class="service-content">
               <div class="service-top">
-                <div>
+                <div class="service-meta">
                   <p class="service-tag">Reverse engineering</p>
-                  <h3>Legacy Board / Circuit Recreation</h3>
+                  <p class="service-start">2-hour minimum</p>
                 </div>
-                <p class="price">CA$65/hr</p>
+                <h3>Legacy Board / Circuit Recreation</h3>
               </div>
 
               <p class="service-summary">
@@ -614,7 +648,15 @@
             </div>
 
             <div class="service-action">
-              <a href="#contact" class="btn btn-secondary full-width">Request reverse engineering</a>
+              <div class="stripe-button-wrap">
+                <stripe-buy-button
+                  buy-button-id="buy_btn_1TmpOnBxiH9fLnpzonNqlNKE"
+                  publishable-key="pk_live_51Tmk7eBxiH9fLnpzQ6DKMkk8iXmvvJmkZzdnr97Z20H3ZwwmimouBnGvzfBrnCrsH4f2VzI4Go5ejm15qMUc9cob00ikpPREut"
+                >
+                </stripe-buy-button>
+              </div>
+              <p class="payment-note">Covers the 2-hour minimum starter payment. Extra hours, PCB manufacturing, parts, and shipping are separate.</p>
+              <a href="#contact" class="service-secondary-link">Ask questions before paying</a>
             </div>
           </article>
         </div>
@@ -707,19 +749,19 @@
     <section class="section pricing-section" id="pricing">
       <div class="site-width section-grid">
         <div class="section-copy">
-          <p class="eyebrow">Transparent pricing</p>
-          <h2>Hourly first, with clear materials and prototype costs.</h2>
+          <p class="eyebrow">Rates &amp; billing</p>
+          <h2>How starter payments and extra hours work.</h2>
         </div>
 
         <div class="section-body">
           <p class="lead-text pricing-lead">
-            Main project rate: CA$65/hr with a 2-hour minimum. Project consultation: CA$150. PCB/schematic review starts at CA$150.
+            Main project rate: CA$65/hr. Hourly starter payments cover the 2-hour minimum, so follow-up invoices only charge total hours worked minus the 2 hours already paid. Project consultation is CA$150, and PCB/schematic review starts at CA$150.
           </p>
 
           <p>
-            Hourly billing keeps the scope flexible for real prototype work, especially when the project changes after
-            testing, measurements, part availability, or mechanical fit-up. Larger prototype phases can still be quoted
-            once the work is clear.
+            For hourly starter services, the upfront payment covers the first 2 hours. If a project takes more time,
+            the follow-up invoice is based on the total hours worked minus the 2 hours already paid. Larger prototype
+            phases can still be quoted once the work is clear.
           </p>
 
           <p>
