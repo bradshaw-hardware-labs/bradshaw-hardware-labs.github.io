@@ -1790,3 +1790,517 @@ body.no-scroll {
     min-height: auto;
   }
 }
+
+
+/* Native Stripe payment-link buttons */
+.native-pay-wrap {
+  width: min(100%, 430px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.service-card.featured .native-pay-wrap {
+  width: min(100%, 460px);
+}
+
+.service-pay-btn {
+  width: 100%;
+  min-height: 52px;
+  padding-inline: 22px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.service-pay-btn:focus-visible,
+.service-secondary-link:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+  .native-pay-wrap,
+  .service-card.featured .native-pay-wrap {
+    width: 100%;
+  }
+
+  .service-pay-btn {
+    width: 100%;
+  }
+}
+
+/* Cleaner service-card payment alignment */
+.services-grid {
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-content h4 {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.compact-card .service-summary {
+  min-height: 0;
+}
+
+.service-card ul {
+  margin-bottom: 0;
+}
+
+.service-action {
+  margin-top: auto;
+  padding-top: 20px;
+  gap: 10px;
+}
+
+.native-pay-wrap,
+.service-card.featured .native-pay-wrap {
+  width: 100%;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+.service-pay-btn {
+  width: 100%;
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+}
+
+.payment-note {
+  width: 100%;
+  max-width: 520px;
+  min-height: 44px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.service-secondary-link {
+  margin-inline: auto;
+}
+
+@media (max-width: 1040px) {
+  .services-grid {
+    grid-auto-rows: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .payment-note {
+    min-height: auto;
+  }
+}
+
+
+/* Final service card alignment pass
+   - All services use a consistent 3-column card layout.
+   - The main service keeps its highlight border, but no longer spans two columns.
+   - Text zones use predictable minimum heights so payment buttons line up cleanly.
+*/
+.services-grid.services-grid-wide {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.services-grid-wide .service-card.featured {
+  grid-column: auto !important;
+}
+
+.service-card,
+.service-card.compact-card,
+.service-card.featured {
+  min-height: 690px;
+  height: 100%;
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-content {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-top {
+  min-height: 98px;
+  margin-bottom: 14px;
+}
+
+.service-summary,
+.compact-card .service-summary {
+  min-height: 150px;
+  margin-bottom: 16px;
+}
+
+.service-content h4 {
+  min-height: 24px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.service-card ul {
+  min-height: 190px;
+  margin-bottom: 0;
+}
+
+.service-card li {
+  margin-bottom: 8px;
+}
+
+.service-action {
+  margin-top: 22px !important;
+  padding-top: 22px;
+  min-height: 150px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.native-pay-wrap,
+.service-card.featured .native-pay-wrap {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.service-pay-btn {
+  width: 100%;
+  min-height: 56px;
+  padding: 14px 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 999px;
+}
+
+.payment-note {
+  width: 100%;
+  max-width: none;
+  min-height: 48px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.service-secondary-link {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 1120px) {
+  .services-grid.services-grid-wide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-card,
+  .service-card.compact-card,
+  .service-card.featured {
+    min-height: 650px;
+  }
+}
+
+@media (max-width: 760px) {
+  .services-grid.services-grid-wide {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card,
+  .service-card.compact-card,
+  .service-card.featured {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .service-top,
+  .service-summary,
+  .compact-card .service-summary,
+  .service-card ul,
+  .service-action,
+  .payment-note {
+    min-height: auto;
+  }
+
+  .service-action {
+    margin-top: 20px !important;
+  }
+}
+
+
+/* TRUE FINAL SERVICE CARD LAYOUT
+   This forces every service card to use the same internal row system:
+   header -> summary -> subheading -> bullets -> payment area.
+   The payment buttons line up because the payment area starts in the same grid row on every card.
+*/
+.services-grid.services-grid-wide,
+.services-grid.services-grid-wide.uniform-services {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+}
+
+.services-grid-wide .service-card.featured,
+.services-grid.services-grid-wide .service-card.featured {
+  grid-column: auto !important;
+}
+
+.services-grid.services-grid-wide .service-card,
+.services-grid.services-grid-wide .service-card.compact-card,
+.services-grid.services-grid-wide .service-card.featured {
+  width: 100%;
+  height: 100%;
+  min-height: 720px;
+  padding: 28px 30px;
+  display: grid;
+  grid-template-rows: auto 150px auto 238px 164px;
+  row-gap: 0;
+  border-radius: 28px;
+}
+
+.services-grid.services-grid-wide .service-content {
+  display: contents;
+}
+
+.services-grid.services-grid-wide .service-top {
+  grid-row: 1;
+  min-height: 0;
+  margin: 0 0 16px;
+}
+
+.services-grid.services-grid-wide .service-meta {
+  min-height: 34px;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.services-grid.services-grid-wide .service-tag,
+.services-grid.services-grid-wide .service-start {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  line-height: 1;
+}
+
+.services-grid.services-grid-wide .service-top h3 {
+  margin: 0;
+  min-height: 64px;
+  display: flex;
+  align-items: flex-start;
+  font-size: clamp(1.35rem, 1.85vw, 1.7rem);
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+}
+
+.services-grid.services-grid-wide .service-summary,
+.services-grid.services-grid-wide .compact-card .service-summary {
+  grid-row: 2;
+  min-height: 0;
+  height: 150px;
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-height: 1.55;
+}
+
+.services-grid.services-grid-wide .service-content h4 {
+  grid-row: 3;
+  min-height: 28px;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.services-grid.services-grid-wide .service-card ul {
+  grid-row: 4;
+  height: 238px;
+  min-height: 0;
+  margin: 0;
+  padding-left: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.services-grid.services-grid-wide .service-card li {
+  margin: 0;
+  line-height: 1.42;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.services-grid.services-grid-wide .service-action {
+  grid-row: 5;
+  min-height: 164px;
+  margin: 0 !important;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.services-grid.services-grid-wide .native-pay-wrap,
+.services-grid.services-grid-wide .service-card.featured .native-pay-wrap {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.services-grid.services-grid-wide .service-pay-btn {
+  width: 100%;
+  min-height: 56px;
+  padding: 14px 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.15;
+  white-space: normal;
+}
+
+.services-grid.services-grid-wide .payment-note {
+  width: 100%;
+  max-width: none;
+  min-height: 48px;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.services-grid.services-grid-wide .service-secondary-link {
+  margin: 0 auto;
+  min-height: 22px;
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (max-width: 1120px) {
+  .services-grid.services-grid-wide,
+  .services-grid.services-grid-wide.uniform-services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .services-grid.services-grid-wide .service-card,
+  .services-grid.services-grid-wide .service-card.compact-card,
+  .services-grid.services-grid-wide .service-card.featured {
+    min-height: 700px;
+    grid-template-rows: auto 140px auto 228px 164px;
+    padding: 26px;
+  }
+
+  .services-grid.services-grid-wide .service-summary,
+  .services-grid.services-grid-wide .compact-card .service-summary {
+    height: 140px;
+  }
+
+  .services-grid.services-grid-wide .service-card ul {
+    height: 228px;
+  }
+}
+
+@media (max-width: 760px) {
+  .services-grid.services-grid-wide,
+  .services-grid.services-grid-wide.uniform-services {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .services-grid.services-grid-wide .service-card,
+  .services-grid.services-grid-wide .service-card.compact-card,
+  .services-grid.services-grid-wide .service-card.featured {
+    min-height: 680px;
+    padding: 22px;
+    grid-template-rows: auto 142px auto 224px 160px;
+  }
+
+  .services-grid.services-grid-wide .service-meta {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .services-grid.services-grid-wide .service-tag,
+  .services-grid.services-grid-wide .service-start {
+    font-size: 0.74rem;
+    padding-inline: 10px;
+  }
+
+  .services-grid.services-grid-wide .service-top h3 {
+    min-height: 56px;
+    font-size: 1.45rem;
+  }
+
+  .services-grid.services-grid-wide .service-summary,
+  .services-grid.services-grid-wide .compact-card .service-summary {
+    height: 142px;
+  }
+
+  .services-grid.services-grid-wide .service-card ul {
+    height: 224px;
+  }
+
+  .services-grid.services-grid-wide .service-action {
+    min-height: 160px;
+  }
+}
+
+@media (max-width: 420px) {
+  .services-grid.services-grid-wide .service-card,
+  .services-grid.services-grid-wide .service-card.compact-card,
+  .services-grid.services-grid-wide .service-card.featured {
+    min-height: 720px;
+    grid-template-rows: auto 160px auto 250px 162px;
+  }
+
+  .services-grid.services-grid-wide .service-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .services-grid.services-grid-wide .service-top h3 {
+    min-height: 72px;
+  }
+
+  .services-grid.services-grid-wide .service-summary,
+  .services-grid.services-grid-wide .compact-card .service-summary {
+    height: 160px;
+  }
+
+  .services-grid.services-grid-wide .service-card ul {
+    height: 250px;
+  }
+}

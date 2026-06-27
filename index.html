@@ -25,8 +25,6 @@
   document.head.appendChild(cssFile);
 </script>
 
-  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-
   <script
     type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
@@ -453,15 +451,15 @@
     <section class="section services-section" id="services">
       <div class="site-width">
         <div class="section-heading">
-          <p class="eyebrow">Services</p>
-          <h2>Hourly electronics support with clear starting points.</h2>
+          <p class="eyebrow">Services &amp; payments</p>
+          <h2>Clear starting points for prototype work.</h2>
           <p>
-            Most custom work starts with either a fixed consultation/review or a 2-hour minimum starter payment.
-            The payment button on each service card is the starting payment, not a full-project cap. Extra time is invoiced separately based on the actual hours worked.
+            Pick the closest starting point below. Hourly starter payments cover the 2-hour minimum;
+            extra time is invoiced later as total hours worked minus the 2 hours already paid.
           </p>
         </div>
 
-        <div class="services-grid services-grid-wide">
+        <div class="services-grid services-grid-wide uniform-services">
           <article class="service-card featured">
             <div class="service-content">
               <div class="service-top">
@@ -479,20 +477,16 @@
 
               <h4>Good for</h4>
               <ul>
-                <li>Consumer product circuits, toy circuits, lighting, audio, sensors, and motor-control prototypes</li>
-                <li>Schematic capture, PCB layout, board review, component selection, and board bring-up</li>
+                <li>Consumer product circuits, toys, lighting, audio, sensors, and motor-control prototypes</li>
+                <li>Schematic capture, PCB layout, board review, component selection, and bring-up</li>
                 <li>Firmware/Bluetooth bring-up and simple hardware-firmware integration</li>
                 <li>Bench debug, measurements, fault isolation, and prototype revision planning</li>
               </ul>
             </div>
 
             <div class="service-action">
-              <div class="stripe-button-wrap">
-                <stripe-buy-button
-                  buy-button-id="buy_btn_1TmpeHBxiH9fLnpz1LNXh1FN"
-                  publishable-key="pk_live_51Tmk7eBxiH9fLnpzQ6DKMkk8iXmvvJmkZzdnr97Z20H3ZwwmimouBnGvzfBrnCrsH4f2VzI4Go5ejm15qMUc9cob00ikpPREut"
-                >
-                </stripe-buy-button>
+              <div class="native-pay-wrap">
+                <a class="btn btn-primary service-pay-btn" href="https://buy.stripe.com/6oU8wOeB34wve2TfbdaZi01">Start electronics support</a>
               </div>
               <p class="payment-note">Covers the 2-hour minimum starter payment. Extra hours are invoiced later.</p>
               <a href="#contact" class="service-secondary-link">Ask questions before paying</a>
@@ -524,12 +518,8 @@
             </div>
 
             <div class="service-action">
-              <div class="stripe-button-wrap">
-                <stripe-buy-button
-                  buy-button-id="buy_btn_1TmoywBxiH9fLnpzPQLLUcHT"
-                  publishable-key="pk_live_51Tmk7eBxiH9fLnpzQ6DKMkk8iXmvvJmkZzdnr97Z20H3ZwwmimouBnGvzfBrnCrsH4f2VzI4Go5ejm15qMUc9cob00ikpPREut"
-                >
-                </stripe-buy-button>
+              <div class="native-pay-wrap">
+                <a class="btn btn-primary service-pay-btn" href="https://buy.stripe.com/fZu28qfF77IH9MD2oraZi00">Book consultation</a>
               </div>
               <p class="payment-note">Fixed consultation for review, direction, and next steps before build work.</p>
               <a href="#contact" class="service-secondary-link">Ask questions before booking</a>
@@ -554,19 +544,15 @@
               <h4>Can include</h4>
               <ul>
                 <li>Power rails, grounding, routing, footprints, connectors, and component choices</li>
-                <li>Manufacturing-file review and layout risk notes</li>
+                <li>Manufacturing-file review, layout risk notes, and practical board feedback</li>
                 <li>Written issue list with recommended fixes</li>
                 <li>Additional review billed hourly after the starting review</li>
               </ul>
             </div>
 
             <div class="service-action">
-              <div class="stripe-button-wrap">
-                <stripe-buy-button
-                  buy-button-id="buy_btn_1TmpF5BxiH9fLnpzeRwCZziD"
-                  publishable-key="pk_live_51Tmk7eBxiH9fLnpzQ6DKMkk8iXmvvJmkZzdnr97Z20H3ZwwmimouBnGvzfBrnCrsH4f2VzI4Go5ejm15qMUc9cob00ikpPREut"
-                >
-                </stripe-buy-button>
+              <div class="native-pay-wrap">
+                <a class="btn btn-primary service-pay-btn" href="https://buy.stripe.com/8x29ASeB39QP7Ev6EHaZi02">Start PCB review</a>
               </div>
               <p class="payment-note">Starts with a fixed review. Larger reviews only continue with your approval.</p>
               <a href="#contact" class="service-secondary-link">Ask questions before paying</a>
@@ -585,19 +571,23 @@
 
               <p class="service-summary">
                 Autodesk CAD support for enclosures, brackets, clips, PCB holders, test fixtures,
-                programming fixtures, printable parts, STEP/STL files, and small 3D printed pieces. Materials are separate.
+                printable parts, STEP/STL files, and small 3D printed support pieces.
               </p>
+
+              <h4>Can include</h4>
+              <ul>
+                <li>Simple enclosure, bracket, fixture, and support-part design</li>
+                <li>STEP/STL exports for 3D printing or outside fabrication</li>
+                <li>PCB holders, test jigs, small clips, and assembly helpers</li>
+                <li>Material, print time, shipping, and outside fabrication quoted separately</li>
+              </ul>
             </div>
 
             <div class="service-action">
-              <div class="stripe-button-wrap">
-                <stripe-buy-button
-                  buy-button-id="buy_btn_1TmpdhBxiH9fLnpzERbLz7rV"
-                  publishable-key="pk_live_51Tmk7eBxiH9fLnpzQ6DKMkk8iXmvvJmkZzdnr97Z20H3ZwwmimouBnGvzfBrnCrsH4f2VzI4Go5ejm15qMUc9cob00ikpPREut"
-                >
-                </stripe-buy-button>
+              <div class="native-pay-wrap">
+                <a class="btn btn-primary service-pay-btn" href="https://buy.stripe.com/eVq3cu9gJaUT2kbe79aZi03">Start CAD / 3D print work</a>
               </div>
-              <p class="payment-note">Covers the 2-hour minimum starter payment. Materials, print time, and outside costs are separate.</p>
+              <p class="payment-note">Covers the 2-hour minimum starter payment. Materials and outside costs are separate.</p>
               <a href="#contact" class="service-secondary-link">Ask questions before paying</a>
             </div>
           </article>
@@ -616,17 +606,21 @@
                 Support for microcontroller bring-up, basic firmware logic, sensor interfaces,
                 serial communication, BLE/Bluetooth modules, motor-control logic, and hardware testing.
               </p>
+
+              <h4>Can include</h4>
+              <ul>
+                <li>Module bring-up, basic configuration, and test wiring</li>
+                <li>BLE/Bluetooth checks, serial communication, and sensor testing</li>
+                <li>Hardware-firmware troubleshooting and bench verification</li>
+                <li>Extra modules, parts, and outside costs quoted separately</li>
+              </ul>
             </div>
 
             <div class="service-action">
-              <div class="stripe-button-wrap">
-                <stripe-buy-button
-                  buy-button-id="buy_btn_1TmpdNBxiH9fLnpz4Q43QKD2"
-                  publishable-key="pk_live_51Tmk7eBxiH9fLnpzQ6DKMkk8iXmvvJmkZzdnr97Z20H3ZwwmimouBnGvzfBrnCrsH4f2VzI4Go5ejm15qMUc9cob00ikpPREut"
-                >
-                </stripe-buy-button>
+              <div class="native-pay-wrap">
+                <a class="btn btn-primary service-pay-btn" href="https://buy.stripe.com/00w00i78B6ED2kb5ADaZi04">Start firmware support</a>
               </div>
-              <p class="payment-note">Covers the 2-hour minimum starter payment. Extra hours, modules, and outside costs are separate.</p>
+              <p class="payment-note">Covers the 2-hour minimum starter payment. Extra hours are invoiced later.</p>
               <a href="#contact" class="service-secondary-link">Ask questions before paying</a>
             </div>
           </article>
@@ -645,17 +639,21 @@
                 Support for tracing older boards, documenting wiring, recreating simple PCB designs,
                 building replacement-board direction, and cleaning up files for practical rebuilds.
               </p>
+
+              <h4>Can include</h4>
+              <ul>
+                <li>Tracing simple boards, connectors, wiring, and functional blocks</li>
+                <li>Recreating practical schematic/PCB files from older assemblies</li>
+                <li>Replacement-board planning, BOM checks, and rebuild direction</li>
+                <li>PCB manufacturing, parts, and shipping quoted separately</li>
+              </ul>
             </div>
 
             <div class="service-action">
-              <div class="stripe-button-wrap">
-                <stripe-buy-button
-                  buy-button-id="buy_btn_1TmpOnBxiH9fLnpzonNqlNKE"
-                  publishable-key="pk_live_51Tmk7eBxiH9fLnpzQ6DKMkk8iXmvvJmkZzdnr97Z20H3ZwwmimouBnGvzfBrnCrsH4f2VzI4Go5ejm15qMUc9cob00ikpPREut"
-                >
-                </stripe-buy-button>
+              <div class="native-pay-wrap">
+                <a class="btn btn-primary service-pay-btn" href="https://buy.stripe.com/dRmaEW8cF1kj3ofd35aZi05">Start recreation support</a>
               </div>
-              <p class="payment-note">Covers the 2-hour minimum starter payment. Extra hours, PCB manufacturing, parts, and shipping are separate.</p>
+              <p class="payment-note">Covers the 2-hour minimum starter payment. Extra hours are invoiced later.</p>
               <a href="#contact" class="service-secondary-link">Ask questions before paying</a>
             </div>
           </article>
